@@ -1,0 +1,9 @@
+[submodule "thirdparty/superglue"]
+	path = thirdparty/superglue
+	url = https://github.com/magicleap/SuperGluePretrainedNetwork.git
+[submodule "thirdparty/nerfmm"]
+	path = thirdparty/nerfmm
+	url = https://github.com/ActiveVisionLab/nerfmm
+[submodule "thirdparty/ATE"]
+	path = thirdparty/ATE
+	url = https://github.com/uzh-rpg/rpg_trajectory_evaluation.git

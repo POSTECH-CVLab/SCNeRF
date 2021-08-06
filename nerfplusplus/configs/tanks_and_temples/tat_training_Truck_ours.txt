@@ -1,0 +1,40 @@
+### INPUT
+datadir = ./data/tanks_and_temples
+scene = tat_training_Truck
+expname = tat_training_Truck_ours
+basedir = ./logs
+config = None
+ckpt_path = None
+no_reload = False
+testskip = 1
+
+### TRAINING
+N_rand = 256
+
+### CASCADE
+cascade_level = 2
+cascade_samples = 64,128
+
+### TESTING
+chunk_size = 4096
+
+### RENDERING
+det = False
+max_freq_log2 = 10
+max_freq_log2_viewdirs = 4
+netdepth = 8
+netwidth = 256
+use_viewdirs = True
+
+### CONSOLE AND TENSORBOARD
+i_img = 20000
+i_print = 200
+i_weights = 50000
+
+### CAMERA
+use_camera = True
+add_ie = 500001
+add_od = 800001
+add_prd = 1100001
+N_iters = 1500001
+multiplicative_noise = True
