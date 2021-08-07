@@ -5,4 +5,4 @@ python run_nerf.py \
     --expname $(basename "${0%.*}") \
     --chunk 8192 \
     --N_rand 1024 \
-    --N_iters 300001
+    --N_iters 800001

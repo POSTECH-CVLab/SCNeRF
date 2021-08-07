@@ -1,0 +1,46 @@
+### INPUT
+datadir = data/fisheyenerf
+scene = chairs
+expname = chairs_ours_high
+basedir = ./logs
+config = None
+ckpt_path = None
+no_reload = False
+testskip = 1
+
+### TRAINING
+N_rand = 1024
+
+### CASCADE
+cascade_level = 2
+cascade_samples = 128, 256
+
+### TESTING
+chunk_size = 4096
+
+### RENDERING
+det = False
+max_freq_log2 = 10
+max_freq_log2_viewdirs = 4
+netdepth = 8
+netwidth = 256
+use_viewdirs = True
+
+### CONSOLE AND TENSORBOARD
+i_img = 20000
+i_print = 200
+i_weights = 50000
+
+### CAMERA MODEL
+camera_model = fisheye
+run_fisheye = True
+use_camera = True
+add_ie = 200001
+add_radial = 400001
+add_od = 600001
+N_iters = 800001
+multiplicative_noise = True
+normalize_factor = 5.0
+
+lrate_decay_steps = 800
+

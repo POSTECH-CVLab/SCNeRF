@@ -288,20 +288,25 @@ def train():
     start = start + 1
     for i in trange(start, N_iters):
         
-        if i == start and i < args.add_ieod and camera_model is not None:
+        if i == start and i < args.add_ie and camera_model is not None:
             camera_model.intrinsics_noise.requires_grad_(False)
             camera_model.extrinsics_noise.requires_grad_(False)
+            print("Deactivated learnable ie")
+
+        if i == start and i < args.add_od and camera_model is not None:
             camera_model.ray_o_noise.requires_grad_(False)
             camera_model.ray_d_noise.requires_grad_(False)
-            print("Deactivated learnable ieod")
+            print("Deactivate learnable od")
 
-        if i == args.add_ieod:
+        if i == args.add_ie and camera_model is not None:
             camera_model.intrinsics_noise.requires_grad_(True)
             camera_model.extrinsics_noise.requires_grad_(True)
+            print("Activated learnable ie")
+
+        if i == args.add_od and camera_model is not None:
             camera_model.ray_o_noise.requires_grad_(True)
             camera_model.ray_d_noise.requires_grad_(True)
-            print("Activated learnable ieod")
-
+            print("Activated learnable od")
 
         time0 = time.time()
         scalars_to_log = {}

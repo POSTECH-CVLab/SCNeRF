@@ -320,8 +320,12 @@ def config_parser():
 
     # Curriculum Learning
     parser.add_argument(
-        "--add_ieod", default=0, type=int, 
-        help="step to start learning ieod"
+        "--add_ie", default=0, type=int, 
+        help="step to start learning ie"
+    )
+    parser.add_argument(
+        "--add_od", default=0, type=int,
+        help="step to start learning od"
     )
     parser.add_argument(
         "--add_prd", type=int, default=50000, 
