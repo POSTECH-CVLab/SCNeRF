@@ -18,4 +18,6 @@ python run_nerf.py \
     --non_linear_weight_decay 0.1 \
     --add_ie 200000 \
     --add_od 400000 \
-    --add_prd 600000
+    --add_prd 600000 \
+    --lrate_decay 400
+
