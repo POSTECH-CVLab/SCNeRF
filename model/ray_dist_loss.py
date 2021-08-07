@@ -98,7 +98,7 @@ def proj_ray_dist_loss_single(
     rays1_o, rays1_d = rays1_o.unsqueeze(0), rays1_d.unsqueeze(0)
 
     intrinsic = intrinsic.clone()
-    if method == "NeRF" and args.run_fisheye:
+    if method == "NeRF":
         # NeRF is using a different coordinate system.
         intrinsic[0][0] = -intrinsic[0][0]
     
