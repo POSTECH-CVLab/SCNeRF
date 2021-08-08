@@ -6,4 +6,5 @@ python run_nerf.py \
     --chunk 8192 \
     --N_rand 1024 \
     --run_without_colmap both \
-    --N_iters 300001
+    --N_iters 600001 \
+    --lrate_decay 300
