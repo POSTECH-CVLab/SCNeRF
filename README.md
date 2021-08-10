@@ -1,4 +1,4 @@
-# Self-Calibrating Neural Radaicne Fields, ICCV, 2021
+# Self-Calibrating Neural Radaince Fields, ICCV, 2021
 
 [Project Page](link) | [Paper](link)
 
@@ -8,11 +8,11 @@ We propose a camera self-calibration algorithm for generic cameras with arbitrar
 We also propose a new geometric loss function, viz., projected ray distance loss. This is because the geometric consistency functions are not valid under non-linear camera noise. We validate our approach on real datasets and demonstrate our model improves the original NeRF with better camera information. Moreover, our model enables reliable rendering even though no calibrated camera information is provided. We experimentally demonstrate that our proposed method is applicable to variants of NeRF. In addition, we also propose a dataset, FishEyeNeRF, that is captured with a fish-eye lens. Our model also shows better performance in the proposed dataset.
 
 ## Curriculum Learning
-TODO: Complete + Animation
+We adopt curriculum learning where learnable camera parameters are subsequentially expanded. In detail, 
 
 
 ## Projected Ray Distance Loss
-TODO: Complete + Animation
+We enhance our model to learn more accurate camera information by jointly optimizing our loss, called projected ray distance loss. 
 
 
 # News 

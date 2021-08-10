@@ -20,4 +20,4 @@ python run_nerf.py \
     --add_ie 1 \
     --add_od 200001 \
     --add_prd 400001 \
-    --lrate_decay 400 
+    --lrate_decay 800 
