@@ -12,12 +12,11 @@ python run_nerf.py \
     --grid_size 10 \
     --ray_dist_loss_weight 0.0001 \
     --N_iters 800001 \
-    --use_custom_optim True \
     --ray_o_noise_scale 1e-3 \
     --ray_d_noise_scale 1e-3 \
-    --non_linear_weight_decay 0.1 \
     --add_ie 200000 \
     --add_od 400000 \
     --add_prd 600000 \
-    --lrate_decay 800
+    --lrate_decay 400 \
+    --ft_path logs/main1_trex_nerf/200000.tar
 

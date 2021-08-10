@@ -6,5 +6,5 @@ python run_nerf.py \
     --chunk 8192 \
     --N_rand 1024 \
     --N_iters 800001 \
-    --lrate_decay 800
+    --lrate_decay 400
 

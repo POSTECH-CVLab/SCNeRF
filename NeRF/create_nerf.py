@@ -157,14 +157,18 @@ def create_nerf(
         ckpt = torch.load(ckpt_path)
 
         start = ckpt['global_step']
-        optimizer.load_state_dict(ckpt['optimizer_state_dict'])
+        
+        pretrained_dict = ckpt['optimizer_state_dict']
+        optim_dict = optimizer.state_dict()
+        optim_dict["state"].update(pretrained_dict["state"])
+        optimizer.load_state_dict(optim_dict)
 
         # Load model
         model.load_state_dict(ckpt['network_fn_state_dict'])
         if not model_fine is None:
             model_fine.load_state_dict(ckpt['network_fine_state_dict'])
 
-        if not camera_model is None:
+        if not camera_model is None and "camera_model" in ckpt.keys():
             camera_model.load_state_dict(ckpt["camera_model"])
 
 
