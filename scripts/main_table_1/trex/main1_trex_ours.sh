@@ -14,9 +14,9 @@ python run_nerf.py \
     --N_iters 800001 \
     --ray_o_noise_scale 1e-3 \
     --ray_d_noise_scale 1e-3 \
-    --add_ie 400000 \
+    --add_ie 200000 \
     --add_od 400000 \
     --add_prd 600000 \
     --lrate_decay 400 \
-    --ft_path logs/main1_trex_nerf/400000.tar
+    --ft_path logs/main1_trex_nerf/200000.tar
 
