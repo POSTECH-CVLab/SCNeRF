@@ -9,7 +9,7 @@ no_reload = False
 testskip = 1
 
 ### TRAINING
-N_rand = 4096
+N_rand = 2048
 
 ### CASCADE
 cascade_level = 2

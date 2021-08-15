@@ -115,7 +115,7 @@ def create_nerf(rank, args, camera_info):
             assert not args.load_test
             camera_dict = {}
             for key, val in to_load["camera_model"].items():
-                if key in ["extrinsics"]:
+                if key in ["extrinsics_noise", "extrinsics_initial"]:
                     continue
                 camera_dict[key] = val
             camera_origin = camera_model.state_dict()

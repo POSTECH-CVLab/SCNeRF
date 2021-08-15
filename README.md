@@ -4,11 +4,11 @@
 
 ## Overview
 
-We propose a camera self-calibration algorithm for generic cameras with arbitrary non-linear distortions. We jointly learn the geometry of the scene and the accurate camera parameters without any calibration objects. Our camera model consists of two components, a pinhole model and a generic noise model that can learn arbitrary non-linear camera distortions. While traditional self-calibration algorithms mostly rely on geometric constraints, we additionally incorporate photometric consistency. This requires learning the geometry of the scene, and we use Neural Radiance Fields (NeRF).
-We also propose a new geometric loss function, viz., projected ray distance loss. This is because the geometric consistency functions are not valid under non-linear camera noise. We validate our approach on real datasets and demonstrate our model improves the original NeRF with better camera information. Moreover, our model enables reliable rendering even though no calibrated camera information is provided. We experimentally demonstrate that our proposed method is applicable to variants of NeRF. In addition, we also propose a dataset, FishEyeNeRF, that is captured with a fish-eye lens. Our model also shows better performance in the proposed dataset.
+In this work, we propose a camera self-calibration algorithm for generic cameras with arbitrary non-linear distortions. We jointly learn the geometry of the scene and the accurate camera parameters without any calibration objects. Our camera model consists a pinhole model, radial distortion, and a generic noise model that can learn arbitrary non-linear camera distortions. While traditional self-calibration algorithms mostly rely on geometric constraints, we additionally incorporate photometric consistency. This requires learning the geometry of the scene and we use Neural Radiance Fields (NeRF).
+We also propose a new geometric loss function, viz., projected ray distance loss, to incorporate geometric consistency for complex non-linear camera models. We validate our approach on standard real image datasets and demonstrate our model can learn the camera intrinsics and extrinsics (pose) from scratch without COLMAP initialization. Also, we show that learning accurate camera models in differentiable manner allows us to improves PSNR over NeRF. We experimentally demonstrate that our proposed method is applicable to variants of NeRF. In addition, we use a set of images captured with a fish-eye lens to demonstrate that learning camera model jointly improves the performance significantly over the COLMAP initialization.
 
 ## Curriculum Learning
-We adopt curriculum learning where learnable camera parameters are subsequentially expanded. In detail, 
+We adopt curriculum learning for better stability of training. We sequentially extend the learnable camera parameters 
 
 
 ## Projected Ray Distance Loss
