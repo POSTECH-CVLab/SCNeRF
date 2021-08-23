@@ -20,6 +20,7 @@ We also propose a new geometric loss function, viz., projected ray distance loss
 - Hardware Spec
     - GPUs 11GB (2080ti) or larger capacity
     - For NeRF++, 2GPUs(2080ti) are required to reproduce the result
+    - For FishEyeNeRF experiments, we have used 4GPUs(V100). 
 
 ## Installation
 - We recommed to use conda for installation. All the requirements for two codes, NeRF and NeRF++, are included in the requirements.txt

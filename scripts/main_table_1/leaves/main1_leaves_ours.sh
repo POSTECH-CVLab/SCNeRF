@@ -10,13 +10,12 @@ python run_nerf.py \
     --multiplicative_noise True \
     --i_ray_dist_loss 10 \
     --grid_size 10 \
+    --run_without_colmap both \
     --ray_dist_loss_weight 0.0001 \
     --N_iters 800001 \
     --ray_o_noise_scale 1e-3 \
     --ray_d_noise_scale 1e-3 \
-    --add_ie 200000 \
-    --add_od 400000 \
-    --add_prd 600000 \
-    --lrate_decay 400 \
-    --ft_path logs/main1_horns_nerf/200000.tar
-
+    --add_ie 0 \
+    --add_od 200000 \
+    --add_prd 400000 \
+    --lrate_decay 400 

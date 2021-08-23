@@ -868,6 +868,7 @@ def train():
     print("Starts Train Rendering")
 
     train_log_at_end = {}
+    i_train = [0]
     
     if camera_model is None:
         train_prd = projected_ray_distance_evaluation(
