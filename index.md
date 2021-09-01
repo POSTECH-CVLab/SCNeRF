@@ -1,5 +1,4 @@
 ---
-permalink: /scnerf/
 last_modified_at: 2021-08-31T22:28:00
 layout: single
 classes: wide
