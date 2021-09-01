@@ -409,7 +409,6 @@ def ddp_train_nerf(rank, args):
         if activate_radial:
             camera_model.distortion_noise.requires_grad_(True)
             logger.info("Activate learnable radial distortion")
-이미지프로세싱
 
         if activate_od:
             camera_model.ray_o_noise.requires_grad_(True)
@@ -465,8 +464,10 @@ def ddp_train_nerf(rank, args):
                                               N_samples=N_samples, det=False)    # [..., N_samples]
                 fg_depth, _ = torch.sort(torch.cat((fg_depth, fg_depth_samples), dim=-1))
 
-                # sample pdf and concat with earlier samples이미지프로세싱
- N_samples-2]
+                # sample pdf and concat with earlier samples
+                bg_weights = ret['bg_weights'].clone().detach()
+                bg_depth_mid = .5 * (bg_depth[..., 1:] + bg_depth[..., :-1])
+                bg_weights = bg_weights[..., 1:-1]                              # [..., N_samples-2]
                 bg_depth_samples = sample_pdf(bins=bg_depth_mid, weights=bg_weights,
                                               N_samples=N_samples, det=False)    # [..., N_samples]
                 bg_depth, _ = torch.sort(torch.cat((bg_depth, bg_depth_samples), dim=-1))

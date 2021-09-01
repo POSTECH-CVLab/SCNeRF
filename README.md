@@ -1,6 +1,11 @@
 # Self-Calibrating Neural Radiance Fields, ICCV, 2021
 
-[Project Page](link) | [Paper](link)
+[Project Page](jeongyw12382.github.io/scnerf) | [Paper](https://arxiv.org/abs/2108.13826) | [Video](https://www.youtube.com/watch?v=_4u7p-cKnw0)
+
+<figure class="video_container">
+  <iframe src="https://www.youtube.com/embed/_4u7p-cKnw0" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
+
 
 ## Overview
 
@@ -32,9 +37,6 @@ We also propose a new geometric loss function, viz., projected ray distance loss
     git submodule update --init --recursive
     ```
 
-# Related Works
-Neural Raidance Fields (NeRF) [[paper]](https://arxiv.org/abs/2010.07492) shows a notable improvement in novel view synthesis task using simple MLP network to learn the scene. We have borrowed a pytorch implementation of NeRF from [[link]](https://github.com/yenchenlin/nerf-pytorch). NeRF++ has pointed out that NeRF can be improved in the real-world scene by separating rendering of background and foreground. We also have borrowed the official implementation of NeRF++ from [[link]](https://github.com/Kai-46/nerfplusplus). We have slightly modifieds details in both implementation. 
-Thanks to a concurrent work "NeRF--: Neural Radiance Fields Without Known Camera Parameters" [[paper]](), [[link]](https://github.com/ActiveVisionLab/nerfmm) for providing us great inspiration to improve our paper. 
 
 # Pretrained Weights & Qualitative Results
 Here, we provide pretrained weights for users to easily reproduce results in the paper. You can download the pretrained weight in the following link. In the link, we provide all the weights of experiments, reported in our paper. To load the pretrained weight, add the following argument at the end of argument in each script. In the zip file, we have also included qualitative results that are used in our paper. 
@@ -42,7 +44,7 @@ Here, we provide pretrained weights for users to easily reproduce results in the
 Link to download the pretrained weight: [[link]](https://drive.google.com/file/d/1rgJ6CpJh9EzmtOB7Q_mp6N4vbNRpE9Gs/view?usp=sharing)
 
 # Raw-data
-We use three datasets for evaluation: LLFF dataset, tanks and temples dataset, and FishEyeNeRF dataset. 
+We use three datasets for evaluation: LLFF dataset, tanks and temples dataset, and FishEyeNeRF dataset (Images captured with a fish-eye lens). 
 - LLFF dataset: [[link]](https://drive.google.com/drive/folders/128yBriW1IG_3NJ5Rp7APSTZsJqdJdfc1)
 - Tanks and Temples dataset: [[link]](https://drive.google.com/file/d/11KRfN91W1AxAW6lOFs4EeYDbeoQZCi87/view?usp=sharing)
 - FishEyeNeRF: [[link]](https://drive.google.com/file/d/1VhnpMUIKEak4TBpKY4H8vMJJe--FM2k5/view?usp=sharing)
@@ -56,16 +58,27 @@ ln -s data/FishEyeNeRF nerfplusplus/data/fisheyenerf
 
 # Demo Code
 
-The demo code is available in "demo.sh" file. This code runs curriculum learning in NeRF architecture. Please install the aformentioned requirements before running the code. To run the demo code, run the follwing script:
+The demo code is available at "demo.sh" file. This code runs curriculum learning in NeRF architecture. Please install the aformentioned requirements before running the code. To run the demo code, run the follwing script:
 
 ```python3
 sh demo.sh
 ```
 
 If you want to reproduce the results that are reported in our main paper, run the scripts in the "scripts" directory.
-Example: 
+
+```
+Main Table 1: Self-Calibration Experiment (LLFF)
+Main Table 2: Improvement over NeRF (LLFF)
+Main Table 3: Improvement over NeRF++ (Tanks and Temples)
+Main Table 4: Improvement over NeRF++ (Images with a fish-eye lens)
+```
+
+Code Example: 
 ```python3
 sh scripts/main_table_1/fern/main1_fern_ours.sh
+sh scripts/main_table_2/fern/main2_fern_ours.sh
+sh scripts/main_table_3/main_3_m60.sh
+sh scripts/main_table_4/globe_ours.sh
 ```
 
 # Citing Self-Calibrating Neural Radiance Fields

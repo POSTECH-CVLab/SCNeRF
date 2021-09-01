@@ -56,7 +56,6 @@ def render(
         # parameters and other camera parameters from the calibrated camera 
         # parameters. It is used only when the code uses our model.
         
-        assert not gt_extrinsic is None
         assert noisy_focal is None
         assert noisy_extrinsic is None
        
@@ -167,6 +166,8 @@ def render_path(
             transform_align=transform_align[i] if transform_align is not None else None,
             **render_kwargs, 
         )
+        rgb = rgb.reshape((H, W, 3))
+        disp = disp.reshape((H, W))
         rgbs.append(rgb.cpu().numpy())
         disps.append(disp.cpu().numpy())
 

@@ -18,3 +18,4 @@ thirdparty/nerfmm_data
 model/colormap.png
 model/trex_ieod.png 
 
+video_scripts.sh

@@ -98,7 +98,7 @@ def train():
     date_time =  datetime.now().strftime('%Y_%m_%d_%H_%M_%S')
     args.expname = "{}_{}_{}".format(args.expname, host_name, date_time)
 
-    if not args.debug: 
+    if not args.debug and not args.render_only: 
         wandb.init(
             name=args.expname,
             project="SCN",
@@ -244,6 +244,46 @@ def train():
 
     # Prepare raybatch tensor if batching random rays
     N_rand = args.N_rand
+
+    if args.render_only:
+        print('RENDER ONLY')
+        with torch.no_grad():
+
+
+            testsavedir = os.path.join(basedir, expname, 'renderonly_{}_{:06d}'.format('test' if args.render_test else 'path', start))
+            os.makedirs(testsavedir, exist_ok=True)
+            to8b = lambda x : (255*np.clip(x,0,1)).astype(np.uint8)
+            print('test poses shape', render_poses.shape)
+
+            render_poses_expand = torch.zeros((len(render_poses), 4, 4), device=device)
+            render_poses_expand[:, :3, :3] = render_poses[:, :3, :3]
+            render_poses_expand[:, 3, 3] = 1.0
+
+            if camera_model is None:
+                _hwf = (hwf[0], hwf[1], None)
+                rgbs, _ = render_path(
+                    render_poses_expand,
+                    _hwf, args.chunk, render_kwargs_test, 
+                    savedir=testsavedir, mode="test", 
+                    args=args, 
+                    gt_intrinsic=gt_intrinsic,
+                    gt_extrinsic=render_poses_expand,
+                )
+                
+            else:
+                _hwf = (hwf[0], hwf[1], None)
+                rgbs, _ = render_path(
+                    render_poses_expand,
+                    _hwf, args.chunk, render_kwargs_test, 
+                    savedir=testsavedir, mode="test", 
+                    camera_model=camera_model, args=args, 
+                    transform_align=render_poses_expand,
+                )
+
+            print('Done rendering', testsavedir)
+            imageio.mimwrite(os.path.join(testsavedir, 'video.mp4'), to8b(rgbs), fps=30, quality=8)
+
+            return
 
     use_batching = not args.no_batching
     
