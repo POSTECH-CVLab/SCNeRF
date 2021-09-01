@@ -65,7 +65,9 @@ The camera parameters determine the positions and directions of the rays for NeR
 # Pretrained Weights & Qualitative Results
 Here, we provide pretrained weights for users to easily reproduce results in the paper. You can download the pretrained weight in the following link. In the link, we provide all the weights of experiments, reported in our paper. To load the pretrained weight, add the following argument at the end of argument in each script. In the zip file, we have also included qualitative results that are used in our paper. 
 
-Link to download the pretrained weight: [[link]](https://drive.google.com/file/d/1rgJ6CpJh9EzmtOB7Q_mp6N4vbNRpE9Gs/view?usp=sharing)
+Link to download the pretrained weight: [[link]](https://drive.google.com/file/d/13TjJUnRPA5UjTfsTBkx18GGXeYEqxTJf/view?usp=sharing)
+
+
 
 # Raw-data
 We use three datasets for evaluation: LLFF dataset, tanks and temples dataset, and FishEyeNeRF dataset (Images captured with a fish-eye lens). 
