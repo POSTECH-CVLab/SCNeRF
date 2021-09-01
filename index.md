@@ -2,7 +2,7 @@
 ## Qucik Intro
 
 <figure class="video_container">
-  <iframe src="https://www.youtube.com/embed/_4u7p-cKnw0" frameborder="0" allowfullscreen="true" width="400", height="300"> </iframe>
+  <iframe src="https://www.youtube.com/embed/_4u7p-cKnw0" frameborder="0" allowfullscreen="true" width="400" height="300"> </iframe>
 </figure>
 
 ## Abstract
