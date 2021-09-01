@@ -3,16 +3,16 @@
 [Project Page](https://jeongyw12382.github.io/scnerf) | [Paper](https://arxiv.org/abs/2108.13826) | [Video](https://www.youtube.com/watch?v=_4u7p-cKnw0)
 
 <div style="text-align:center">
-<img src="assets/scnerf_teaser.png" alt="prd" width="600" />
+<img src="assets/scnerf_teaser.png" alt="prd"/>
 </div>
 
 ## Quick Intro (Click the Image)
 
-<div style="text-align:center">
+<p align="center">
 
-[![scnerf](https://img.youtube.com/vi/_4u7p-cKnw0/0.jpg)](https://www.youtube.com/embed/_4u7p-cKnw0 "Everything Is AWESOME")
+[![scnerf](https://img.youtube.com/vi/_4u7p-cKnw0/0.jpg)](https://www.youtube.com/embed/_4u7p-cKnw0 )
 
-</div>
+</p>
 
 ## News 
 - 2021-08-16: The first version of Self-Calibrating Neural Radiance Fields is published
@@ -28,7 +28,7 @@ We also propose a new geometric loss function, viz., projected ray distance loss
 ### Generic Camera Model
 We provide the definition of our differentiable camera model that combines the pinhole camera model, radial distortion, and a generic non-linear camera distortion for self-calibration. Our differentiable generic camera model consists of four components: intrinsic, extrinsic, radial distortion, and non-linear distortion parameters. Reflecting our generic camera models in ray generation process, our model enables improved camera information. The image below shows a computational steps to generate rays with our proposed learnable generic camera model. 
 <div style="text-align:center">
-<img src="assets/scnerf_computation.png" alt="prd" width="400" />
+<img src="assets/scnerf_computation.png" alt="prd" />
 </div>
 
 
@@ -38,7 +38,7 @@ The generic camera model poses a new challenge defining a geometric loss. In mos
 <!-- ![](/assets/images/scnerf_prd.png) -->
 
 <div style="text-align:center">
-<img src="assets/scnerf_prd.png" alt="prd" width="400" />
+<img src="assets/scnerf_prd.png" alt="prd"/>
 </div>
 
 ### Curriculum Learning
@@ -46,7 +46,7 @@ The camera parameters determine the positions and directions of the rays for NeR
 
 
 <div style="text-align:center">
-<img src="assets/scnerf_curriculum.png" alt="prd" width="400" />
+<img src="assets/scnerf_curriculum.png" alt="prd"/>
 </div>
 
 # Pre-requisite
