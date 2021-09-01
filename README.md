@@ -2,15 +2,17 @@
 
 [Project Page](https://jeongyw12382.github.io/scnerf) | [Paper](https://arxiv.org/abs/2108.13826) | [Video](https://www.youtube.com/watch?v=_4u7p-cKnw0)
 
-<center><img src="assets/scnerf_teaser.png" alt="prd" width="600" /></center>
+<div style="text-align:center">
+<img src="assets/scnerf_teaser.png" alt="prd" width="600" />
+</div>
 
 ## Quick Intro (Click the Image)
 
-<center>
+<div style="text-align:center">
 
 [![scnerf](https://img.youtube.com/vi/_4u7p-cKnw0/0.jpg)](https://www.youtube.com/embed/_4u7p-cKnw0 "Everything Is AWESOME")
 
-</center>
+</div>
 
 ## News 
 - 2021-08-16: The first version of Self-Calibrating Neural Radiance Fields is published
@@ -25,8 +27,9 @@ We also propose a new geometric loss function, viz., projected ray distance loss
 
 ### Generic Camera Model
 We provide the definition of our differentiable camera model that combines the pinhole camera model, radial distortion, and a generic non-linear camera distortion for self-calibration. Our differentiable generic camera model consists of four components: intrinsic, extrinsic, radial distortion, and non-linear distortion parameters. Reflecting our generic camera models in ray generation process, our model enables improved camera information. The image below shows a computational steps to generate rays with our proposed learnable generic camera model. 
-
-<center><img src="assets/scnerf_computation.png" alt="prd" width="400" /></center>
+<div style="text-align:center">
+<img src="assets/scnerf_computation.png" alt="prd" width="400" />
+</div>
 
 
 ### Projected Ray Distance
@@ -34,13 +37,17 @@ The generic camera model poses a new challenge defining a geometric loss. In mos
 
 <!-- ![](/assets/images/scnerf_prd.png) -->
 
-<center><img src="assets/scnerf_prd.png" alt="prd" width="400" /></center>
+<div style="text-align:center">
+<img src="assets/scnerf_prd.png" alt="prd" width="400" />
+</div>
 
 ### Curriculum Learning
 The camera parameters determine the positions and directions of the rays for NeRF learning, and unstable values often result in divergence or sub-optimal results. Thus, we add a subset of learning parameters to the optimization process to jointly reduce the complexity of learning cameras and geometry. First, we learn the NeRF networks while initializing the camera focal lengths and focal centers to half the image width and height. Learning coarse geometry first is crucial since it initializes the networks to a more favorable local optimum for learning better camera parameters. Next, we sequentially add camera parameters for the linear camera model, radial distortion, and nonlinear noise of ray direction, ray origin to the learning. We learn simpler camera models first to reduce overfitting and faster training.
 
-<center><img src="assets/scnerf_curriculum.png" alt="prd" width="400" /></center>
 
+<div style="text-align:center">
+<img src="assets/scnerf_curriculum.png" alt="prd" width="400" />
+</div>
 
 # Pre-requisite
 
