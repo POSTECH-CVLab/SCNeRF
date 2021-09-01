@@ -7,7 +7,7 @@
 </div>
 
 ## News 
-- 2021-08-16: The first version of Self-Calibrating Neural Radiance Fields is published
+- 2021-09-02: The first version of Self-Calibrating Neural Radiance Fields is published
 
 ## Overview
 
