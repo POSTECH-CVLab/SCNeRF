@@ -40,16 +40,16 @@ Although our model does not adopt carefully calibrated camera information, i.e. 
 
 Although our model does not adopt carefully calibrated camera information, i.e. COLMAP camera information, our model renders scenes clearly. 
 
-<center>
+<!-- <center>
 |-|-|-|
 | <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/fern.mp4" type="video/mp4"></video></figure> | <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/flower.mp4" type="video/mp4"></video></figure>  | 
-</center>
+</center> -->
 
 ## Improvement over NeRF++ [[Tanks and Temples dataset]](https://www.tanksandtemples.org/)
 
 <div style="float:left;">
     <div align="center">
-        <iframe src="https://drive.google.com/file/d/1lYTuBAJYITvVkLBMoRXIBWTNeWIT7Hi4/preview?start=1&loop=1" width="550" height="480" allow="autoplay" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1lYTuBAJYITvVkLBMoRXIBWTNeWIT7Hi4/preview?start=1&loop=1" width="550" height="0" allow="autoplay" frameborder="0" allowfullscreen></iframe>
     </div>
 </div>
 <div style="float:right;">
