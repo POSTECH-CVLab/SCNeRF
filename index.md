@@ -21,10 +21,12 @@ In this work, we propose a camera self-calibration algorithm for generic cameras
 
 Although our model does not adopt carefully calibrated camera information, i.e. COLMAP camera information, our model renders scenes clearly. 
 
-<center>
+
+<iframe src="https://drive.google.com/file/d/1ml_3ucdnlRflkSBUSThjVTmgsJ7M6WNV/preview" width="400"></iframe>
+<!-- <center>
 |-|-|-|
-| <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="https://drive.google.com/file/d/1ml_3ucdnlRflkSBUSThjVTmgsJ7M6WNV/preview" type="video/mp4"></video></figure> | <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="https://drive.google.com/file/d/1C6sP92idfi6Uzg7MWsuPPdQ54wQ3w4C3/preview" type="video/mp4"></video></figure>  | 
-</center>
+| <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="https://drive.google.com/file/d/1ml_3ucdnlRflkSBUSThjVTmgsJ7M6WNV/preview" type="video/mp4"></video></figure> | <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="https://drive.google.com/file/d/1C6sP92idfi6Uzg7MWsuPPdQ54wQ3w4C3/" type="video/mp4"></video></figure>  | 
+</center> -->
 
 ## Improvement over NeRF [[LLFF dataset]](https://github.com/Fyusion/LLFF)
 
