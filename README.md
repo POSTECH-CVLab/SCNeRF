@@ -3,7 +3,9 @@
 [Project Page](jeongyw12382.github.io/scnerf) | [Paper](https://arxiv.org/abs/2108.13826) | [Video](https://www.youtube.com/watch?v=_4u7p-cKnw0)
 
 
-[![scnerf](https://img.youtube.com/vi/_4u7p-cKnw0/0.jpg)](https://www.youtube.com/embed/_4u7p-cKnw0)
+## Quick Intro (Click the Image)
+
+[![scnerf](https://img.youtube.com/vi/_4u7p-cKnw0/0.jpg)](https://www.youtube.com/embed/_4u7p-cKnw0 "Everything Is AWESOME")
 
 
 ## Overview
