@@ -1,8 +1,17 @@
+---
+permalink: /scnerf/
+last_modified_at: 2021-08-31T22:28:00
+layout: single
+classes: wide
+author_profile: true
+title: "Self-Calibrating Neural Radiance Fields"
+---
+
 
 ## Qucik Intro
 
 <figure class="video_container">
-  <iframe src="https://www.youtube.com/embed/_4u7p-cKnw0" frameborder="0" allowfullscreen="true" width="700" height="400"> </iframe>
+  <iframe src="https://www.youtube.com/embed/_4u7p-cKnw0" frameborder="0" allowfullscreen="true" width="600" height="400"> </iframe>
 </figure>
 
 ## Abstract
@@ -16,7 +25,8 @@ Our module is an easy-to-use plugin that can be applied to NeRF variants to impr
 Although our model does not adopt carefully calibrated camera information, i.e. COLMAP camera information, our model renders scenes clearly. 
 
 <div class="table-wrapper" markdown="block">
-|-|-| -|-|-| -|-|-| -|-|-| -|
+
+|-|-|-|
 | <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/fern.mp4" type="video/mp4"></video></figure> | <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/flower.mp4" type="video/mp4"></video></figure>  | <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/fortress.mp4" type="video/mp4"></video></figure>| <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/horns.mp4" type="video/mp4"></video></figure>| <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/leaves.mp4" type="video/mp4"></video></figure> | <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/orchids.mp4" type="video/mp4"></video></figure> | <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/room.mp4" type="video/mp4"></video></figure> | <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/trex.mp4" type="video/mp4"></video></figure> |
 </div>
 
