@@ -1,37 +1,44 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/POSTECH-CVLab/SCNeRF/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Qucik Intro
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<figure class="video_container">
+  <iframe src="https://www.youtube.com/embed/_4u7p-cKnw0" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
 
-### Markdown
+## Abstract
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+In this work, we propose a camera self-calibration algorithm for generic cameras with arbitrary non-linear distortions. We jointly learn the geometry of the scene and the accurate camera parameters without any calibration objects. Our camera model consists of a pinhole model, a fourth order radial distortion, and a generic noise model that can learn arbitrary non-linear camera distortions. While traditional self-calibration algorithms mostly rely on geometric constraints, we additionally incorporate photometric consistency. This requires learning the geometry of the scene, and we use Neural Radiance Fields (NeRF). We also propose a new geometric loss function, viz., projected ray distance loss, to incorporate geometric consistency for complex non-linear camera models. We validate our approach on standard real image datasets and demonstrate that our model can learn the camera intrinsics and extrinsics (pose) from scratch without COLMAP initialization. Also, we show that learning accurate camera models in a differentiable manner allows us to improve PSNR over baselines. 
+Our module is an easy-to-use plugin that can be applied to NeRF variants to improve performance. The code and data are currently available at [[link]](https://github.com/POSTECH-CVLab/SCNeRF).
 
-```markdown
-Syntax highlighted code block
+## Method
 
-# Header 1
-## Header 2
-### Header 3
+We provide descriptions of our algorithm in the following link: [[link]](/scnerf_contents)
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+## Concurrent Works
+We compare typical concurrent works with ours. 
 
-**Bold** and _Italic_ and `Code` text
+1. NeRF--: Neural Radiance Fields Without Known Camera Parameters
+    - [[Paper]](https://arxiv.org/abs/2102.07064) [[Code]](https://github.com/ActiveVisionLab/nerfmm)
+    - This paper has proposed a self-calibration algorithm that enables rendering without camera information prior. By jointly optimizing NeRF parameters and camera parameters, NeRF-- successfully render images in several datasets. 
+    - Our paper additionally propose camera parameters that reflect non-linear distortions, and the projected ray distance loss that improves geometric consistency of rays that are generated from correspondences.
 
-[Link](url) and ![Image](src)
-```
+2. BARF: Bundle-Adjusting Neural Radiance Fields
+    - [[Paper]](https://arxiv.org/abs/2104.06405) [[Code]](https://github.com/chenhsuanlin/bundle-adjusting-NeRF)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+## Qualitative Results
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/POSTECH-CVLab/SCNeRF/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Rendering without any camera information [[LLFF dataset]](https://github.com/Fyusion/LLFF)
 
-### Support or Contact
+<!-- Although our model does not adopt carefully calibrated camera information, i.e. COLMAP camera information, our model renders scenes clearly. 
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+|-|-| -|-|-| -|-|-| -|-|-| -|
+| <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/fern.mp4" type="video/mp4"></video></figure> | <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/flower.mp4" type="video/mp4"></video></figure>  | <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/fortress.mp4" type="video/mp4"></video></figure>| <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/horns.mp4" type="video/mp4"></video></figure>| <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/leaves.mp4" type="video/mp4"></video></figure> | <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/orchids.mp4" type="video/mp4"></video></figure> | <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/room.mp4" type="video/mp4"></video></figure> | <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/trex.mp4" type="video/mp4"></video></figure> | -->
+
+
+
+### Improvement over NeRF++ [[Tanks and Temples dataset]](https://www.tanksandtemples.org/)
+
+ <!-- |-|-| -|-|-|
+| <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/m60_ours.mp4" type="video/mp4"></video></figure> |  <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/playground_ours.mp4" type="video/mp4"></video></figure> | <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/train_ours.mp4" type="video/mp4"></video></figure> | <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/truck_ours.mp4" type="video/mp4"></video></figure> |  -->
