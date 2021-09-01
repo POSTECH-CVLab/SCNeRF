@@ -39,7 +39,7 @@ Although our model does not adopt carefully calibrated camera information, i.e. 
 
 ## Improvement over NeRF [[LLFF dataset]](https://github.com/Fyusion/LLFF)
 
-Although our model does not adopt carefully calibrated camera information, i.e. COLMAP camera information, our model renders scenes clearly. 
+Our algorithm improves NeRF in LLFF dataset. 
 
 <div style="float:left;">
     <div align="center">
@@ -53,6 +53,8 @@ Although our model does not adopt carefully calibrated camera information, i.e. 
 </div>
 
 ## Improvement over NeRF++ [[Tanks and Temples dataset]](https://www.tanksandtemples.org/)
+
+Our algorithm also improves NeRF++ in LLFF dataset. 
 
 <div style="float:left;">
     <div align="center">
