@@ -1,6 +1,6 @@
 # Self-Calibrating Neural Radiance Fields, ICCV, 2021
 
-[Project Page](jeongyw12382.github.io/scnerf) | [Paper](https://arxiv.org/abs/2108.13826) | [Video](https://www.youtube.com/watch?v=_4u7p-cKnw0)
+[Project Page](https://jeongyw12382.github.io/scnerf) | [Paper](https://arxiv.org/abs/2108.13826) | [Video](https://www.youtube.com/watch?v=_4u7p-cKnw0)
 
 
 ## Quick Intro (Click the Image)
