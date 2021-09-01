@@ -26,12 +26,12 @@ Although our model does not adopt carefully calibrated camera information, i.e. 
 
 <div style="float:left;">
     <div align="center">
-        <iframe src="https://drive.google.com/file/d/1ml_3ucdnlRflkSBUSThjVTmgsJ7M6WNV/preview?autoplay=1&loop=1" width="550" height="480" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1ml_3ucdnlRflkSBUSThjVTmgsJ7M6WNV/preview?start=1&loop=1" width="550" height="480" allow="autoplay; fullscreen" allowfullscreen></iframe>
     </div>
 </div>
 <div style="float:right;">
     <div align="center">
-        <iframe src="https://drive.google.com/file/d/1C6sP92idfi6Uzg7MWsuPPdQ54wQ3w4C3/preview?autoplay=1&loop=1" width="550" height="480" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1C6sP92idfi6Uzg7MWsuPPdQ54wQ3w4C3/preview?start=1&loop=1" width="550" height="480" allow="autoplay; fullscreen" allowfullscreen></iframe>
     </div>
 </div>
 <!-- <center>
