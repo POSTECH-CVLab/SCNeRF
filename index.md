@@ -4,6 +4,7 @@ classes: wide
 title: "Self-Calibrating Neural Radiance Fields"
 ---
 
+[Paper](https://arxiv.org/abs/2108.13826) | [Video](https://www.youtube.com/watch?v=_4u7p-cKnw0)
 
 ## Qucik Intro
 
@@ -63,7 +64,3 @@ Although our model does not adopt carefully calibrated camera information, i.e. 
         <iframe src="https://drive.google.com/file/d/1J_mDD-EMHSdAvxLFlA2l4dVL-5WKvuiO/preview?start=1&loop=1" width="550" height="480" allow="autoplay" frameborder="0" allowfullscreen></iframe>
     </div>
 </div>
-
-## Acknowledgement
-
-We appreciate for all the ICCV reviewers for valuable comments. Their valuable suggestions have helped us to improve our paper. 
