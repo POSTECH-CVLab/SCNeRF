@@ -34,10 +34,7 @@ Although our model does not adopt carefully calibrated camera information, i.e. 
         <iframe src="https://drive.google.com/file/d/1C6sP92idfi6Uzg7MWsuPPdQ54wQ3w4C3/preview?start=1&loop=1" width="550" height="480" allow="autoplay" frameborder="0" allowfullscreen></iframe>
     </div>
 </div>
-<!-- <center>
-|-|-|-|
-| <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="https://drive.google.com/file/d/1ml_3ucdnlRflkSBUSThjVTmgsJ7M6WNV/preview" type="video/mp4"></video></figure> | <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="" type="video/mp4"></video></figure>  | 
-</center> -->
+
 
 ## Improvement over NeRF [[LLFF dataset]](https://github.com/Fyusion/LLFF)
 
@@ -50,7 +47,13 @@ Although our model does not adopt carefully calibrated camera information, i.e. 
 
 ## Improvement over NeRF++ [[Tanks and Temples dataset]](https://www.tanksandtemples.org/)
 
-<center>
-|-|-|-|
-| <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/fern.mp4" type="video/mp4"></video></figure> | <figure class="video_container"><video autoplay="" loop="" controls width="400"><source src="/assets/videos/flower.mp4" type="video/mp4"></video></figure>  | 
-</center>
+<div style="float:left;">
+    <div align="center">
+        <iframe src="https://drive.google.com/file/d/1lYTuBAJYITvVkLBMoRXIBWTNeWIT7Hi4/preview?start=1&loop=1" width="550" height="480" allow="autoplay" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+<div style="float:right;">
+    <div align="center">
+        <iframe src="https://drive.google.com/file/d/1J_mDD-EMHSdAvxLFlA2l4dVL-5WKvuiO/preview?start=1&loop=1" width="550" height="480" allow="autoplay" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
