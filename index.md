@@ -6,7 +6,7 @@ title: "Self-Calibrating Neural Radiance Fields"
 
 [Paper](https://arxiv.org/abs/2108.13826) | [Video](https://www.youtube.com/watch?v=_4u7p-cKnw0) | [Code](https://github.com/POSTECH-CVLab/SCNeRF)
 
-## Qucik Intro
+## Quick Intro
 
 <center>
 <figure class="video_container">
@@ -32,7 +32,7 @@ Our algorithm improves NeRF in LLFF dataset.
 
 ## Improvement over NeRF++ [[Tanks and Temples dataset]](https://www.tanksandtemples.org/)
 
-Our algorithm also improves NeRF++ in LLFF dataset. 
+Our algorithm also improves NeRF++ in Tanks and Temples dataset. 
 
 {% include npp_w_colmap.html height="50" unit="%" duration="7" %}
 
