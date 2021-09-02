@@ -22,51 +22,19 @@ In this work, we propose a camera self-calibration algorithm for generic cameras
 
 Although our model does not adopt carefully calibrated camera information, i.e. COLMAP camera information, our model renders scenes clearly. 
 
-
-
-
-<div style="float:left;">
-    <div align="center">
-        <iframe src="https://drive.google.com/file/d/1ml_3ucdnlRflkSBUSThjVTmgsJ7M6WNV/preview?start=1&loop=1" width="550" height="480" allow="autoplay" frameborder="0" allowfullscreen></iframe>
-    </div>
-</div>
-<div style="float:right;">
-    <div align="center">
-        <iframe src="https://drive.google.com/file/d/1C6sP92idfi6Uzg7MWsuPPdQ54wQ3w4C3/preview?start=1&loop=1" width="550" height="480" allow="autoplay" frameborder="0" allowfullscreen></iframe>
-    </div>
-</div>
-
+{% include nerf_wo_colmap.html height="50" unit="%" duration="7" %}
 
 ## Improvement over NeRF [[LLFF dataset]](https://github.com/Fyusion/LLFF)
 
 Our algorithm improves NeRF in LLFF dataset. 
 
-<div style="float:left;">
-    <div align="center">
-        <iframe src="https://drive.google.com/file/d/1458sv9hSC2ns1t4zo9C1Eoz-jGyRDmS-/preview?start=1&loop=1" width="550" height="480" allow="autoplay" frameborder="0" allowfullscreen></iframe>
-    </div>
-</div>
-<div style="float:right;">
-    <div align="center">
-        <iframe src="https://drive.google.com/file/d/11W4P9oWZ6guumEu5E2WhF6-hXn1ghXg_/preview?start=1&loop=1" width="550" height="480" allow="autoplay" frameborder="0" allowfullscreen></iframe>
-    </div>
-</div>
+{% include nerf_w_colmap.html height="50" unit="%" duration="7" %}
 
 ## Improvement over NeRF++ [[Tanks and Temples dataset]](https://www.tanksandtemples.org/)
 
 Our algorithm also improves NeRF++ in LLFF dataset. 
 
-<div style="float:left;">
-    <div align="center">
-        <iframe src="https://drive.google.com/file/d/1lYTuBAJYITvVkLBMoRXIBWTNeWIT7Hi4/preview?start=1&loop=1" width="550" height="480" allow="autoplay" frameborder="0" allowfullscreen></iframe>
-    </div>
-</div>
-<div style="float:right;">
-    <div align="center">
-        <iframe src="https://drive.google.com/file/d/1J_mDD-EMHSdAvxLFlA2l4dVL-5WKvuiO/preview?start=1&loop=1" width="550" height="480" allow="autoplay" frameborder="0" allowfullscreen></iframe>
-    </div>
-</div>
-
+{% include npp_w_colmap.html height="50" unit="%" duration="7" %}
 
 ## Acknowledgement
 

@@ -1,0 +1,10 @@
+videos:
+  - video: "http://cvlab.postech.ac.kr/~seokjun/scnerf/nerf_wo_colmap/fern_wo_colmap.mp4"
+  - video: "http://cvlab.postech.ac.kr/~seokjun/scnerf/nerf_wo_colmap/flower_wo_colmap.mp4"
+  - video: "http://cvlab.postech.ac.kr/~seokjun/scnerf/nerf_wo_colmap/fortress_wo_colmap.mp4"
+  - video: "http://cvlab.postech.ac.kr/~seokjun/scnerf/nerf_wo_colmap/horns_wo_colmap.mp4"
+  - video: "http://cvlab.postech.ac.kr/~seokjun/scnerf/nerf_wo_colmap/leaves_wo_colmap.mp4"
+  - video: "http://cvlab.postech.ac.kr/~seokjun/scnerf/nerf_wo_colmap/orchids_wo_colmap.mp4"
+  - video: "http://cvlab.postech.ac.kr/~seokjun/scnerf/nerf_wo_colmap/room_wo_colmap.mp4"
+  - video: "http://cvlab.postech.ac.kr/~seokjun/scnerf/nerf_wo_colmap/trex_wo_colmap.mp4"
+

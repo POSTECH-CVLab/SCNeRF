@@ -1,0 +1,6 @@
+videos:
+  - video: "http://cvlab.postech.ac.kr/~seokjun/scnerf/npp_colmap/m60_colmap.mp4"
+  - video: "http://cvlab.postech.ac.kr/~seokjun/scnerf/npp_colmap/playground_colmap.mp4"
+  - video: "http://cvlab.postech.ac.kr/~seokjun/scnerf/npp_colmap/train_colmap.mp4"
+  - video: "http://cvlab.postech.ac.kr/~seokjun/scnerf/npp_colmap/truck_colmap.mp4"
+
