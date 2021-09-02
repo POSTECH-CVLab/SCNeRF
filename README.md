@@ -4,7 +4,7 @@
 
 ### Author Information
 - Yoonwoo Jeong [[Google Scholar]](https://scholar.google.com/citations?user=HQ1PMggAAAAJ&hl=en) [[Blog]](https://jeongyw12382.github.io)
-- Seokjun Ahn 
+- Seokjun Ahn [[Google Scholar]](https://scholar.google.com/citations?user=JDEvLgwAAAAJ&hl=en)
 - Chris Choy [[Google Scholar]](https://scholar.google.com/citations?user=2u8G5ksAAAAJ&hl=en&oi=ao) [[Blog]](https://chrischoy.github.io)
 - Animashree Anandkumar [[Google Scholar]](https://scholar.google.com/citations?user=bEcLezcAAAAJ&hl=en&oi=ao) [[Blog]](http://tensorlab.cms.caltech.edu/users/anima/)
 - Minsu Cho [[Google Scholar]](https://scholar.google.com/citations?user=5TyoF5QAAAAJ&hl=en&oi=ao) [[Blog]](http://cvlab.postech.ac.kr/~mcho/)
