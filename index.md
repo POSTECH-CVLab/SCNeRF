@@ -10,7 +10,7 @@ title: "Self-Calibrating Neural Radiance Fields"
 
 <center>
 <figure class="video_container">
-  <iframe src="https://www.youtube.com/embed/_4u7p-cKnw0" frameborder="0" allowfullscreen="true" width="600" height="400"> </iframe>
+  <iframe src="https://www.youtube.com/embed/_4u7p-cKnw0" frameborder="0" allowfullscreen="true" width="100%"> </iframe>
 </figure>
 </center>
 
