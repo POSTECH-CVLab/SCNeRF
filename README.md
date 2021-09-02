@@ -3,7 +3,7 @@
 [Project Page](https://postech-cvlab.github.io/SCNeRF/) | [Paper](https://arxiv.org/abs/2108.13826) | [Video](https://www.youtube.com/watch?v=_4u7p-cKnw0)
 
 ### Author Information
-- Yoonwoo Jeong [[Google Scholar]](https://scholar.google.com/citations?user=HQ1PMggAAAAJ&hl=en) [Blog](https://jeongyw12382.github.io)
+- Yoonwoo Jeong [[Google Scholar]](https://scholar.google.com/citations?user=HQ1PMggAAAAJ&hl=en) [[Blog]](https://jeongyw12382.github.io)
 - Seokjun Ahn 
 - Chris Choy [[Google Scholar]](https://scholar.google.com/citations?user=2u8G5ksAAAAJ&hl=en&oi=ao) [[Blog]](https://chrischoy.github.io)
 - Animashree Anandkumar [[Google Scholar]](https://scholar.google.com/citations?user=bEcLezcAAAAJ&hl=en&oi=ao) [[Blog]](http://tensorlab.cms.caltech.edu/users/anima/)
