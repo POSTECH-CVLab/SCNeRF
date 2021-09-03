@@ -4,7 +4,7 @@ classes: wide
 title: "Self-Calibrating Neural Radiance Fields"
 ---
 
-[Paper](https://arxiv.org/abs/2108.13826) | [Video](https://www.youtube.com/watch?v=_4u7p-cKnw0) | [Code](https://github.com/POSTECH-CVLab/SCNeRF)
+[Paper](https://arxiv.org/abs/2108.13826) | [Video](https://www.youtube.com/watch?v=wsjx6geduvk) | [Code](https://github.com/POSTECH-CVLab/SCNeRF)
 
 ## Quick Intro
 
