@@ -127,3 +127,4 @@ sh scripts/main_table_4/globe_ours.sh
 # Acknowledgements
 
 We appreciate for all the ICCV reviewers for valuable comments. Their valuable suggestions have helped us to improve our paper. 
+We have borrowed implementations from NeRF++(https://github.com/Kai-46/nerfplusplus) and NeRF-pytorch(https://github.com/yenchenlin/nerf-pytorch).
