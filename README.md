@@ -22,6 +22,13 @@
 In this work, we propose a camera self-calibration algorithm for generic cameras with arbitrary non-linear distortions. We jointly learn the geometry of the scene and the accurate camera parameters without any calibration objects. Our camera model consists a pinhole model, radial distortion, and a generic noise model that can learn arbitrary non-linear camera distortions. While traditional self-calibration algorithms mostly rely on geometric constraints, we additionally incorporate photometric consistency. This requires learning the geometry of the scene and we use Neural Radiance Fields (NeRF).
 We also propose a new geometric loss function, viz., projected ray distance loss, to incorporate geometric consistency for complex non-linear camera models. We validate our approach on standard real image datasets and demonstrate our model can learn the camera intrinsics and extrinsics (pose) from scratch without COLMAP initialization. Also, we show that learning accurate camera models in differentiable manner allows us to improves PSNR over NeRF. We experimentally demonstrate that our proposed method is applicable to variants of NeRF. In addition, we use a set of images captured with a fish-eye lens to demonstrate that learning camera model jointly improves the performance significantly over the COLMAP initialization.
 
+## Concurrent Works
+We compare typical concurrent works with ours. We would update if any additional concurrent works were published. 
+
+1. NeRF--: Neural Radiance Fields Without Known Camera Parameters
+    - [[Paper]](https://arxiv.org/abs/2102.07064) [[Code]](https://github.com/ActiveVisionLab/nerfmm)
+    - This paper has proposed a self-calibration algorithm that enables rendering without camera information prior. By jointly optimizing NeRF parameters and camera parameters, NeRF-- successfully render images in several datasets. 
+    - Our paper additionally propose camera parameters that reflect non-linear distortions, and the projected ray distance loss that improves geometric consistency of rays that are generated from correspondences.
 
 ## Method
 
