@@ -1,6 +1,6 @@
 # Self-Calibrating Neural Radiance Fields, ICCV, 2021
 
-[Project Page](https://postech-cvlab.github.io/SCNeRF/) | [Paper](https://arxiv.org/abs/2108.13826) | [Video](https://www.youtube.com/watch?v=_4u7p-cKnw0)
+[Project Page](https://postech-cvlab.github.io/SCNeRF/) | [Paper](https://arxiv.org/abs/2108.13826) | [Video](https://www.youtube.com/watch?v=wsjx6geduvk)
 
 ### Author Information
 - Yoonwoo Jeong [[Google Scholar]](https://scholar.google.com/citations?user=HQ1PMggAAAAJ&hl=en) [[Blog]](https://jeongyw12382.github.io)
