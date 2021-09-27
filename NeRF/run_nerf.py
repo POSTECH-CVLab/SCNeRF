@@ -102,7 +102,6 @@ def train():
         wandb.init(
             name=args.expname,
             project="SCN",
-            entity="nextgennerf"
         )
 
     # Multi-GPU

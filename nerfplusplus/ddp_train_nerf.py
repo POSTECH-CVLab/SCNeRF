@@ -370,7 +370,6 @@ def ddp_train_nerf(rank, args):
         wandb.init(
             config=args,
             name=args.expname,
-            entity="nextgennerf",
             project="NeRF++"
         )
 
