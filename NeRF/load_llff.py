@@ -374,6 +374,6 @@ def load_llff_data(basedir, factor=8, recenter=True, bd_factor=.75, spherify=Fal
     extrinsics_gt = torch.zeros((len(poses), 4, 4)).cuda()
     extrinsics_gt[:, :3, :4] = torch.from_numpy(poses[:, :, :4]).cuda()
     extrinsics_gt[:, 3, 3] = 1
-    
+
     return images, poses_update, bds, render_poses, i_test, \
         (intrinsic_gt, extrinsics_gt)

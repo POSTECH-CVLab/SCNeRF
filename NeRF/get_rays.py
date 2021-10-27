@@ -101,7 +101,6 @@ def get_rays_kps_use_camera(H,
     # in camera_model. It can be either single int or list of ints.
     # Selecting keypoints are only used in train mode.
     # kps_list has the form of (x, y)
-
     assert kps_list[:, 0].max() < W
     assert kps_list[:, 1].max() < H
     assert (

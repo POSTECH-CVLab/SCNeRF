@@ -36,6 +36,7 @@ from config_argparse import config_parser
 # DataLoader
 from load_llff import load_llff_data
 from load_blender import load_blender_data
+from load_custom import load_custom_data
 
 # NeRF network
 from create_nerf import create_nerf
@@ -169,7 +170,41 @@ def train():
                 (1. - images[..., -1:])
         else:
             images = images[..., :3]
-            
+
+    elif args.dataset_type == 'custom':
+        (
+            images, noisy_extrinsic, bds, render_poses, i_test, gt_camera_info
+        ) = load_custom_data(
+            args.datadir, args.factor, recenter=True, bd_factor=.75, 
+            spherify=args.spherify, args=args
+        )
+
+        
+        i_train = np.array([i for i in np.arange(int(images.shape[0]))])
+        
+        noisy_idx = i_train[0]
+        hwf = noisy_extrinsic[noisy_idx, :3, -1]
+        noisy_extrinsic = noisy_extrinsic[:, :3, :4]
+        noisy_extrinsic_new = np.zeros(
+            (len(noisy_extrinsic), 4, 4)
+        ).astype(np.float32)
+        noisy_extrinsic_new[:, :3, :] = noisy_extrinsic
+        noisy_extrinsic_new[:, 3, 3] = 1
+        noisy_extrinsic = noisy_extrinsic_new
+
+        (gt_intrinsic, gt_extrinsic) = gt_camera_info
+        
+        print("Loaded LLFF dataset")
+        print("Images shape : {}".format(images.shape))
+        print("HWF : {}".format(hwf))
+        print("Directory path of data : {}".format(args.datadir))
+
+        print('DEFINING BOUNDS')
+        
+        i_val = i_test = i_train
+        near = 0.
+        far = 1.
+
     else:
         assert False,"Invalid Dataset Selected"
         return
@@ -239,12 +274,15 @@ def train():
     render_kwargs_test.update(bds_dict)
 
     # Move testing data to GPU
-    render_poses = render_poses.to(device)
+    if not render_poses is None:
+        render_poses = render_poses.to(device)
 
     # Prepare raybatch tensor if batching random rays
     N_rand = args.N_rand
 
     if args.render_only:
+
+        assert not render_poses is None, "You should implement render_poses in loader part" 
         print('RENDER ONLY')
         with torch.no_grad():
 
@@ -671,47 +709,47 @@ def train():
                 os.makedirs(testsavedir, exist_ok=True)
                 print('test poses shape', noisy_extrinsic[i_test].shape)
 
-                if camera_model is None:
-                    eval_prd = projected_ray_distance_evaluation(
-                        images=images, 
-                        index_list=i_test,
-                        args=args, 
-                        ray_fun=get_rays_kps_no_camera,
-                        ray_fun_gt=get_rays_kps_no_camera,
-                        H=H,
-                        W=W,
-                        mode="test",
-                        matcher=matcher,
-                        gt_intrinsic=gt_intrinsic,
-                        gt_extrinsic=gt_extrinsic,
-                        method="NeRF",
-                        device=device,
-                        intrinsic=gt_intrinsic,
-                        extrinsic=gt_extrinsic
-                    )
+                # if camera_model is None:
+                #     eval_prd = projected_ray_distance_evaluation(
+                #         images=images, 
+                #         index_list=i_test,
+                #         args=args, 
+                #         ray_fun=get_rays_kps_no_camera,
+                #         ray_fun_gt=get_rays_kps_no_camera,
+                #         H=H,
+                #         W=W,
+                #         mode="test",
+                #         matcher=matcher,
+                #         gt_intrinsic=gt_intrinsic,
+                #         gt_extrinsic=gt_extrinsic,
+                #         method="NeRF",
+                #         device=device,
+                #         intrinsic=gt_intrinsic,
+                #         extrinsic=gt_extrinsic
+                #     )
                     
-                else:
-                    eval_prd = projected_ray_distance_evaluation(
-                        images=images, 
-                        index_list=i_test,
-                        args=args, 
-                        ray_fun=get_rays_kps_use_camera,
-                        ray_fun_gt=get_rays_kps_no_camera,
-                        H=H,
-                        W=W,
-                        mode="test",
-                        matcher=matcher,
-                        gt_intrinsic=gt_intrinsic,
-                        gt_extrinsic=gt_extrinsic,
-                        method="NeRF",
-                        device=device,
-                        camera_model=camera_model,
-                        intrinsic=gt_intrinsic,
-                        extrinsic=gt_extrinsic
-                    )
+                # else:
+                #     eval_prd = projected_ray_distance_evaluation(
+                #         images=images, 
+                #         index_list=i_test,
+                #         args=args, 
+                #         ray_fun=get_rays_kps_use_camera,
+                #         ray_fun_gt=get_rays_kps_no_camera,
+                #         H=H,
+                #         W=W,
+                #         mode="test",
+                #         matcher=matcher,
+                #         gt_intrinsic=gt_intrinsic,
+                #         gt_extrinsic=gt_extrinsic,
+                #         method="NeRF",
+                #         device=device,
+                #         camera_model=camera_model,
+                #         intrinsic=gt_intrinsic,
+                #         extrinsic=gt_extrinsic
+                #     )
                     
-                scalars_to_log["test/proj_ray_dist_loss"] = eval_prd
-                print(f"Test projection ray distance loss {eval_prd}")
+                # scalars_to_log["test/proj_ray_dist_loss"] = eval_prd
+                # print(f"Test projection ray distance loss {eval_prd}")
                 
                 with torch.no_grad():
             
@@ -852,46 +890,46 @@ def train():
 
             print("VAL PSNR {}: {}".format(img_i, val_psnr.item()))
 
-            if camera_model is None:
-                eval_prd = projected_ray_distance_evaluation(
-                    images=images, 
-                    index_list=i_val,
-                    args=args, 
-                    ray_fun=get_rays_kps_no_camera,
-                    ray_fun_gt=get_rays_kps_no_camera,
-                    H=H,
-                    W=W,
-                    mode="val",
-                    matcher=matcher,
-                    gt_intrinsic=gt_intrinsic,
-                    gt_extrinsic=gt_extrinsic,
-                    method="NeRF",
-                    device=device,
-                    intrinsic=gt_intrinsic,
-                    extrinsic=gt_extrinsic,
-                )
+            # if camera_model is None:
+            #     eval_prd = projected_ray_distance_evaluation(
+            #         images=images, 
+            #         index_list=i_val,
+            #         args=args, 
+            #         ray_fun=get_rays_kps_no_camera,
+            #         ray_fun_gt=get_rays_kps_no_camera,
+            #         H=H,
+            #         W=W,
+            #         mode="val",
+            #         matcher=matcher,
+            #         gt_intrinsic=gt_intrinsic,
+            #         gt_extrinsic=gt_extrinsic,
+            #         method="NeRF",
+            #         device=device,
+            #         intrinsic=gt_intrinsic,
+            #         extrinsic=gt_extrinsic,
+            #     )
 
-            else:
-                eval_prd = projected_ray_distance_evaluation(
-                    images=images, 
-                    index_list=i_val,
-                    args=args, 
-                    ray_fun=get_rays_kps_use_camera,
-                    ray_fun_gt=get_rays_kps_no_camera,
-                    H=H,
-                    W=W,
-                    mode="val",
-                    matcher=matcher,
-                    gt_intrinsic=gt_intrinsic,
-                    gt_extrinsic=gt_extrinsic,
-                    method="NeRF",
-                    device=device,
-                    camera_model=camera_model
-                )            
+            # else:
+            #     eval_prd = projected_ray_distance_evaluation(
+            #         images=images, 
+            #         index_list=i_val,
+            #         args=args, 
+            #         ray_fun=get_rays_kps_use_camera,
+            #         ray_fun_gt=get_rays_kps_no_camera,
+            #         H=H,
+            #         W=W,
+            #         mode="val",
+            #         matcher=matcher,
+            #         gt_intrinsic=gt_intrinsic,
+            #         gt_extrinsic=gt_extrinsic,
+            #         method="NeRF",
+            #         device=device,
+            #         camera_model=camera_model
+            #     )            
             
-            scalars_to_log["val/proj_ray_dist_loss"] = eval_prd
+            # scalars_to_log["val/proj_ray_dist_loss"] = eval_prd
 
-            print("Validation PRD : {}".format(eval_prd))
+            # print("Validation PRD : {}".format(eval_prd))
 
         # Logging Step
             
