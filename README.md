@@ -95,9 +95,9 @@ We use three datasets for evaluation: LLFF dataset, tanks and temples dataset, a
 Put the data in the directory "data/" then add soft link with one of the following:
 
 ```
-ln -s data/nerf_llff_data NeRF/data
-ln -s data/tanks_and_temples nerfplusplus/data
-ln -s data/FishEyeNeRF nerfplusplus/data/fisheyenerf
+ln -s data NeRF/data
+ln -s data nerfplusplus/data
+ln -s data nerfplusplus/data/fisheyenerf
 ```
 
 ## Demo Code
