@@ -78,6 +78,19 @@ The camera parameters determine the positions and directions of the rays for NeR
     ```
 
 
+### Generating COLMAP poses of custom image set
+
+- We further provide a COLMAP pose generator that can be applied to custom image sets. Run the code below if you should acquire camera information for custome image sets. 
+```
+bash colmap_utils/colmap.sh [path to image set]
+```
+The image collection should be inside the directory "images." Checkout the COLMAP document
+```
+[path]
+    |--- images
+```
+
+
 ## Pretrained Weights & Qualitative Results
 
 Here, we provide pretrained weights for users to easily reproduce results in the paper. You can download the pretrained weight in the following link. In the link, we provide all the weights of experiments, reported in our paper. To load the pretrained weight, add the following argument at the end of argument in each script. In the zip file, we have also included qualitative results that are used in our paper.
