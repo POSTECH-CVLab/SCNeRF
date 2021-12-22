@@ -135,7 +135,7 @@ Code Example:
 ```
 sh scripts/main_table_1/fern/main1_fern_ours.sh
 sh scripts/main_table_2/fern/main2_fern_ours.sh
-sh scripts/main_table_3/main_3_m60.sh
+sh scripts/main_table_3/main3_m60.sh
 sh scripts/main_table_4/globe_ours.sh
 ```
 
