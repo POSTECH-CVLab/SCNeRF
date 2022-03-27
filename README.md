@@ -143,7 +143,7 @@ sh scripts/main_table_4/globe_ours.sh
 
 ```
 @inproceedings{SCNeRF2021,
-    author = {Yoonwoo Jeong, Seokjun Ahn, Christopehr Choy, Animashree Anandkumar, 
+    author = {Yoonwoo Jeong, Seokjun Ahn, Christopher Choy, Animashree Anandkumar, 
     Minsu Cho, and Jaesik Park},
     title = {Self-Calibrating Neural Radiance Fields},
     booktitle = {ICCV},
