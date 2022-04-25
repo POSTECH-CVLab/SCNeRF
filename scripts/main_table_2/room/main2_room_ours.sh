@@ -18,5 +18,5 @@ python run_nerf.py \
     --add_od 400000 \
     --add_prd 600000 \
     --lrate_decay 400 \
-    --ft_path logs/main1_room_nerf/200000.tar
+    --ft_path logs/main2_room_nerf/200000.tar
 
