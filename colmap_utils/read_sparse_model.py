@@ -375,38 +375,23 @@ def main():
         cnt = 0
         image_dict = {image.name: i + 1 for (i, image) in enumerate(images.values())}
         image_ext = os.listdir(os.path.join(args.working_dir, "images"))[0][-4:]
-        depth_ext = os.listdir(os.path.join(args.working_dir, "depth"))[0][-4:]
         orig_image_dir = os.path.join(args.working_dir, "images")
-        orig_depth_dir = os.path.join(args.working_dir, "depth")
         new_image_dir = os.path.join(args.working_dir, "_images")
-        new_depth_dir = os.path.join(args.working_dir, "_depth")
-        os.makedirs(new_depth_dir, exist_ok=True)
         os.makedirs(new_image_dir, exist_ok=True)
         for (i, _) in enumerate(os.listdir(os.path.join(args.working_dir, "images"))):
             image_curr_name = f"image{str(i+1).zfill(3)}{image_ext}"
-            depth_curr_name = f"depth{str(i+1).zfill(3)}{depth_ext}"
             image_orig_path = os.path.join(orig_image_dir, image_curr_name)
-            depth_orig_path = os.path.join(orig_depth_dir, depth_curr_name)
             if image_curr_name in image_dict.keys():
                 curr_idx = image_dict[image_curr_name]
                 image_rename_path = os.path.join(
                     new_image_dir, f"image{str(curr_idx).zfill(3)}{image_ext}"
                 )
-                depth_rename_path = os.path.join(
-                    args.working_dir,
-                    "_depth",
-                    f"depth{str(curr_idx).zfill(3)}{depth_ext}",
-                )
                 os.rename(image_orig_path, image_rename_path)
-                os.rename(depth_orig_path, depth_rename_path)
             else:
                 os.remove(image_orig_path)
-                os.remove(depth_orig_path)
 
         shutil.rmtree(orig_image_dir)
-        shutil.rmtree(orig_depth_dir)
         os.rename(new_image_dir, orig_image_dir)
-        os.rename(new_depth_dir, orig_depth_dir)
 
     with open(os.path.join(args.working_dir, "train.txt"), "w") as fp:
         for key in images.keys():
