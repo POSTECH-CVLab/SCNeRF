@@ -4,7 +4,7 @@
 
 ## Author Information
 
-- [Yoonwoo Jeong](https://jeongyw12382.github.io) [[Google Scholar]](https://scholar.google.com/citations?user=HQ1PMggAAAAJ&hl=en)
+- [Yoonwoo Jeong](https://yoonwooinfo.notion.site) [[Google Scholar]](https://scholar.google.com/citations?user=HQ1PMggAAAAJ&hl=en)
 - Seokjun Ahn [[Google Scholar]](https://scholar.google.com/citations?user=JDEvLgwAAAAJ&hl=en)
 - [Chris Choy](https://chrischoy.org) [[Google Scholar]](https://scholar.google.com/citations?user=2u8G5ksAAAAJ&hl=en&oi=ao)
 - [Anima Anandkumar](http://tensorlab.cms.caltech.edu/users/anima/) [[Google Scholar]](https://scholar.google.com/citations?user=bEcLezcAAAAJ&hl=en&oi=ao)
